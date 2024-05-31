@@ -2,10 +2,11 @@
 import { store } from '../assets/data/store'
 import axios from 'axios'
 export default {
+    name: "AppHeader",
     data() {
         return {
             store,
-            filmUtente: ''
+            filmUtente: [],
         };
     },
     methods: {
