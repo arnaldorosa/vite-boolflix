@@ -5,14 +5,14 @@ export default {
     data() {
         return {
             store,
-            filmUtente: ""
-        }
+            filmUtente: ''
+        };
     },
     methods: {
         filmGen() {
             const options = {
             method: 'GET',
-            url: 'https://api.themoviedb.org/3/movie/popular',
+            url: 'https://api.themoviedb.org/3/movie/11?api_key=b7a1e84eb8c806944cebe07238a104c2',
             params: { include_adult: 'false', language: 'en-US', page: '1' },
             headers: {
               accept: 'application/json',
@@ -21,8 +21,8 @@ export default {
         };
         axios
             .request(options)
-            .then(function (response) {
-            console.log(response.data);
+            .then((response) => {
+                this.filmUtente = response.data;
             })
             .catch(function (error) {
             console.error(error);

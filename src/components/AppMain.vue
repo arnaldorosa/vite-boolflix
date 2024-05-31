@@ -13,7 +13,7 @@ export default {
 <template>
     <section class="bg-crimson">
         <div class="white-container">
-            <h3>Found {{ store.films.length }} films</h3>
+            <h3>Trovati {{ store.films.length }} film</h3>
             <!-- <div class="cards-container">
                 <div v-for="film in store.films" class="cards">
                     <img src="" alt="">
@@ -35,11 +35,13 @@ export default {
     justify-content: center;
     align-items: center;
     padding: 20px;
+    border-radius: 10px;
 }
 
 .white-container {
     width: 80%;
     height: 80%;
+    border-radius: 10px;
     background-color: black;
 }
 
